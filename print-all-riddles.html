@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Riddles in the Dark</title>
+    <meta name="description" content="Can you find and solve the riddles?">
+    <meta property="og:image" content="https://ethyl2.github.io/riddles/images/riddles_in_the_dark.png" />
+    <meta property="og:url" content="https://ethyl2.github.io/riddles/print-all-riddles.html" />
+    <meta property="og:title" content="Riddles in the Dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Can you find and solve the riddles?" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@ethyl22">
+    <meta name="twitter:title" content="Riddles in the Dark">
+    <meta name="twitter:description" content="Can you find and solve the riddles?">
+    <meta name="twitter:image" content="https://ethyl2.github.io/riddles/images/riddles_in_the_dark.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Knewave&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="favicon.ico?">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body class="min-h-screen mb-0 overflow-x-auto text-black">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header>
+      <h1 class="pt-4 pb-2 text-2xl text-center md:text-3xl"
+        style="font-family: 'Knewave', cursive;">
+        riddles in the <span class="line-through">dark</span> light
+      </h1>
+    </header>
+    <main>
+      <h2 class="text-center text-lg"
+        style="font-family: 'Knewave', cursive;">
+        all of them
+      </h2>
+      <ol id="all-riddles"
+        class="grid grid-cols-3 text-sm w-full px-4 pt-6 font-thin"
+        style="font-family: 'Caveat', cursive;">
+      </ol>
+    </main>
+    <script src="../midAutumn/js/riddles.js" async defer></script>
+    <script type="text/javascript">
+      const riddlesSection = document.getElementById('all-riddles')
+
+      function shuffle(a) { for (var j, i = a.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1));[a[i], a[j]] = [a[j], a[i]] } }
+
+      window.addEventListener('load', () => {
+        shuffle(riddles)
+        riddles.forEach((riddle, i) => {
+          const riddleBox = document.createElement('li')
+          const questionEl = document.createElement('p')
+          questionEl.textContent = i + 1 + '. ' + riddle.question
+          riddleBox.append(questionEl)
+          const answerSection = document.createElement('div')
+          answerSection.classList.add('flex', 'flex-wrap', 'items-center', 'justify-start', 'pl-2')
+          riddle.answer.forEach(option => {
+            const answerPill = document.createElement('p')
+            answerPill.textContent = option
+            answerPill.classList.add('rounded-full', 'px-3', 'm-1', 'border', 'border-gray-300')
+
+            answerSection.append(answerPill)
+          })
+          riddleBox.append(answerSection)
+          riddleBox.classList.add('flex', 'flex-col', 'justify-start', 'items-start')
+
+          riddlesSection.append(riddleBox)
+        })
+        window.print()
+      })
+    </script>
+
+  </body>
+
+</html>

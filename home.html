@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <!--==================== UNICONS 图标====================-->
+  <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+  />
+  <!--==================== SWIPER CSS ====================-->
+  <link rel="stylesheet" href="../midAutumn/assets/css/swiper-bundle.min.css"/>
+
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="../midAutumn/assets/css/styles.css"/>
+  <!-- iconfont font class 方式引用图标 -->
+  <!-- <link
+    rel="stylesheet"
+    href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
+  /> -->
+
+  <title>HomePage</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header scroll-header" id="header">
+  <nav class="nav container">
+    <a href="#" class="nav__logo">midAutumn</a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list grid">
+        <li class="nav__item">
+          <a href="#home" class="nav__link">
+            <i class="uil uil-estate nav__icon"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">
+            <i class="uil uil-user nav__icon"></i>
+            <p>About</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#skills" class="nav__link">
+            <i class="uil uil-file-alt nav__icon"></i>
+            <p>History</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./games.html" class="nav__link">
+            <i class="uil uil-scenery nav__icon"></i>
+            <p>Games</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">
+            <i class="uil uil-message nav__icon"></i>
+            <p>Contactme</p>
+          </a>
+        </li>
+      </ul>
+      <i class="uil uil-times nav__close" id="nav-close"></i>
+    </div>
+
+    <div class="nav__btns">
+      <i class="uil uil-moon change-theme" id="theme-button"></i>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="uil uil-apps"></i>
+      </div>
+    </div>
+
+    <div class="nav__btns">
+      <div class="dropdown">
+        <img id="myImage" src='images/user.png' alt="" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer"/>
+        <div class="dropdown-content">
+          <p id="username">Lisa</p>
+          <button class="button1" onclick="cancel()">logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+  <!--==================== HOME ====================-->
+  <section class="home section" id="home">
+    <div class="home__container container grid">
+      <div class="home__content grid">
+        <div class="home__social">
+          <a
+            href="https://gitee.com/asoutherncat/"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <!-- <i class="uil uil-linkedin-alt"></i> -->
+            <svg
+              t="1674798484640"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="2757"
+            >
+              <path
+                d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"
+                fill="hsl(250deg 69% 61%)"
+                p-id="2758"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="http://github.com"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <i class="uil uil-github-alt"></i>
+          </a>
+          <a
+            href="https://t.bilibili.com/"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <!-- <i class="uil uil-dribbble"></i> -->
+            <svg
+              t="1674801734735"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="4124"
+            >
+              <path
+                d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.872v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.872v-320a160 160 0 0 1 160-160h49.749334L246.4 207.146667a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965333h137.088c2.261333-3.925333 5.12-7.68 8.490667-11.008l113.109333-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.205333 49.365333l-0.128 4.010667v320c0 28.117333 21.76 51.157333 49.365333 53.162666l3.968 0.170667h533.333334a53.333333 53.333333 0 0 0 53.205333-49.365333l0.128-3.968v-320c0-29.44-23.893333-53.333333-53.333333-53.333334z m-426.666667 106.666666c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z m320 0c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z"
+                fill="hsl(250deg 69% 61%)"
+                p-id="4125"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="home__img">
+          <svg
+            class="home__blob"
+            viewBox="0 0 200 187"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <mask id="mask0" mask-type="alpha">
+              <path
+                d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+              />
+            </mask>
+            <g mask="url(#mask0)">
+              <image
+                class="home__blob-img"
+                x="0"
+                y="-30"
+                href="../images/1.jpg"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="home__data">
+          <h1 class="home__title">
+            midAutumn
+          </h1>
+          <h3 class="home__subtitle" >
+            The fifteenth day of the eighth lunar month
+          </h3>
+          <p class="home__description">
+            On this night, people look up at the bright and bright moon in the sky like jade,
+            and naturally look forward to family reunion.
+          </p>
+          <a href="./poster.html" class="button button-flex">
+            <span>Enter post</span>
+            <i class="uil uil-message button__icon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="home__scroll">
+        <a href="#about" class="home__scroll-button button--flex">
+          <i class="uil uil-mouse-alt-2 home__scroll-mouse"></i>
+          <span class="home__scroll-name"
+          >Scroll down</span
+          >
+          <i class="uil uil-arrow-down home__scroll-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!--==================== ABOUT ====================-->
+  <section class="about section" id="about">
+    <h2 class="section__title">About midAutumn</h2>
+    <span class="section__subtitle">Introduction</span>
+    <div class="about__container container grid">
+      <img src="./images/img.png" alt="" class="about__img"/>
+
+      <div class="about__data">
+        <p class="about__description">
+          Our people have the custom of "autumn twilight and moon on eve" in ancient times. Xiyue,
+          that is, to worship the moon god. In the Zhou Dynasty, every mid-autumn night,
+          there were festivals to welcome the cold and sacrifice the moon.
+        </p>
+
+        <div class="about__info">
+          <div>
+            <span class="about__info-title">3</span>
+            <span class="about__info-name">day</span>
+          </div>
+
+          <div>
+            <span class="about__info-title">cake</span>
+            <span class="about__info-name">food</span>
+          </div>
+
+          <div>
+            <span class="about__info-title">dragon</span>
+            <span class="about__info-name">programme</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--==================== SKILLS ====================-->
+  <section class="skills section" id="skills">
+    <h2 class="section__title">History</h2>
+    <span class="section__subtitle">midAutumn</span>
+
+    <div class="skills__container container grid">
+      <div>
+        <!--==================== SKILLS 1 ====================-->
+        <div class="skills__content skills__close">
+          <div class="skills__header">
+            <img src="./images/jing.png" alt="" style="width: 1.5rem;height: auto;margin-top: -1rem;margin-right: 1rem"/>
+
+            <div>
+              <h1 class="skills__title">
+                Tang Dynasty
+              </h1>
+              <span class="skills__subtitle">More than 2000 years</span>
+            </div>
+
+            <i class="uil uil-angle-down skills__arrow"></i>
+          </div>
+
+          <div class="skills__list grid">
+            In the Tang Dynasty, it was quite popular to enjoy and play with the moon during the Mid-Autumn Festival.
+            In the Northern Song Dynasty capital. On the night of the 15th day of the eighth lunar month, people all
+            over the city,
+            regardless of whether they are rich or poor, young or old, must put on adult clothes, burn incense and pray
+            to the moon,
+            express their wishes, and pray for the blessing of the moon god.
+          </div>
+        </div>
+        <!--==================== SKILLS 2 ====================-->
+        <div class="skills__content skills__close">
+          <div class="skills__header">
+            <img src="./images/jing.png" alt="" style="width: 1.5rem;height: auto;margin-top: -1rem;margin-right: 1rem"/>
+
+            <div>
+              <h1 class="skills__title">
+                Song
+              </h1>
+              <span class="skills__subtitle">More than 1500 years</span>
+            </div>
+
+            <i class="uil uil-angle-down skills__arrow"></i>
+          </div>
+
+          <div class="skills__list grid">
+            In the Southern Song Dynasty, the folks presented mooncakes as a gift for reunion.
+            In some places, there are also activities such as dancing grass dragons and building pagodas.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--==================== Custom ====================-->
+  <section class="portfolio section" id="portfolio">
+    <h2 class="section__title" >Games</h2>
+    <span class="section__subtitle">Most recent works</span>
+
+    <div class="portfolio__container container swiper-container">
+      <div class="swiper-wrapper">
+        <!--==================== Custom 1 ====================-->
+
+        <div class="portfolio__content grid swiper-slide">
+          <img
+            src="./images/img.png"
+            alt=""
+            class="portfolio__img"
+          />
+
+          <div class="portfolio_">
+            <h3 class="portfolio__title">
+              Family reunion
+            </h3>
+            <p
+              class="portfolio__description"
+              style="text-indent: 2em;text-align: justify;text-justify: inter-word"
+            >
+              The whole family gets together. Such as "Mid-Autumn Festival, every family reunite and enjoy the moon."
+            </p>
+            <a
+              href="games.html"
+              target="_blank"
+              class="button button--flex button--small portfolio__button"
+            >
+              Game
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <!--==================== Custom 2 ====================-->
+
+        <div class="portfolio__content grid swiper-slide">
+          <img
+            src="./images/shangyue.png"
+            alt=""
+            class="portfolio__img"
+          />
+
+          <div class="portfolio_">
+            <h3 class="portfolio__title">
+              Admiring the moon
+            </h3>
+            <p
+              class="portfolio__description"
+              style="text-indent: 2em;text-align: justify;text-justify: inter-word"
+            >
+              Appreciating the moon is an important custom of the Mid-Autumn Festival.
+              It also refers to watching the full moon during the Mid-Autumn Festival on August 15th.
+            </p>
+            <a
+              href="https://github.com/xkong-study/"
+              target="_blank"
+              class="button button--flex button--small portfolio__button"
+            >
+              Post
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <!--==================== Custom 3 ====================-->
+
+        <div class="portfolio__content grid swiper-slide">
+          <img
+            src="./images/nav.png"
+            alt=""
+            class="portfolio__img"
+          />
+
+          <div class="portfolio_">
+            <h3 class="portfolio__title">
+              Flower Viewing
+            </h3>
+            <p
+              class="portfolio__description"
+              style="text-indent: 2rem;text-align: justify;text-justify: inter-word"
+            >
+              Enjoying flowers in the Mid-Autumn Festival, the spiritual flowers will definitely add a beautiful scenery to the family reunion.
+            </p>
+            <a
+              href="https://github.com/xkong-study/"
+              target="_blank"
+              class="button button--flex button--small portfolio__button"
+            >
+              Post
+              <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- add arrows-->
+      <div class="swiper-button-next">
+        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+      </div>
+
+      <div class="swiper-button-prev">
+        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+      </div>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!--==================== CONTACT ME ====================-->
+  <section class="contact section" id="contact">
+    <h2 class="section__title">Contact me</h2>
+    <span class="section__subtitle"
+    >Get in touch</span
+    >
+
+    <div class="contact__container container grid">
+      <div>
+        <div class="contact__information">
+          <i class="uil uil-phone-alt contact__icon"></i>
+
+          <div>
+            <h3 class="contact__title">Call me</h3>
+            <span class="contact__subtitle"
+            >166********</span
+            >
+          </div>
+        </div>
+
+        <div class="contact__information">
+          <i class="uil uil-envelope contact__icon"></i>
+
+          <div>
+            <h3 class="contact__title">E-mail</h3>
+            <span class="contatc__subtitle"
+            >kong@###.ie</span
+            >
+          </div>
+        </div>
+
+        <div class="contact__information">
+          <i class="uil uil-map-marker contact__icon"></i>
+
+          <div>
+            <h3 class="contact__title" >Location</h3>
+            <span class="contatc__subtitle"
+            >HuNan , CHN</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--==================== SCROLL TOP ====================-->
+<a href="#" class="scrollup" id="scroll-up">
+  <i class="uil uil-arrow-up scrollup__icon"></i>
+</a>
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+  <div class="footer__bg">
+    <div class="footer__container container grid">
+      <div>
+        <h1 class="footer__title">MidAutumn</h1>
+        <span class="footer__subtitle"
+        >Chinese festival</span
+        >
+      </div>
+
+      <ul class="footer__links">
+        <li>
+          <a href="#skills" class="footer__link">Introduction</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="footer__link">Post</a>
+        </li>
+        <li>
+          <a href="#contact" class="footer__link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="footer__socials">
+        <a href="https://gitee.com/asoutherncat/" target="_blank">
+          <svg class="icon footer__social" aria-hidden="true">
+            <use xlink:href="#icon-gitee"></use>
+          </svg>
+        </a>
+        <a href="http://github.com" target="_blank">
+          <svg class="icon footer__social" aria-hidden="true">
+            <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="https://t.bilibili.com/" target="_blank">
+          <svg class="icon footer__social" aria-hidden="true">
+            <use xlink:href="#icon-bilibili-line"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <p class="footer__copy">
+      &#169; midAutumn.Copy from
+    </p>
+  </div>
+</footer>
+
+<!--==================== SWIPER JS ====================-->
+<script src="../midAutumn/assets/js/swiper-bundle.min.js"></script>
+
+<!-- iconfont JS -->
+<script src="../midAutumn/assets/js/iconfont.js"></script>
+<!-- jquery -->
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--==================== MAIN JS ====================-->
+<script src="../midAutumn/assets/js/main.js"></script>
+
+<script>
+  let img = localStorage.getItem('img')
+  let myImage = document.getElementById("myImage");
+  myImage.src = img;
+  let usernameElement = document.getElementById("username");
+  usernameElement.textContent = localStorage.getItem('name')
+  console.log(usernameElement.textContent)
+
+  function cancel(){
+    myImage.src = 'images/img_3.png'
+    usernameElement.textContent = 'unknown'
+    localStorage.setItem('name','unknown')
+    localStorage.setItem('img','images/img_3.png')
+  }
+</script>
+
+</body>
+</html>

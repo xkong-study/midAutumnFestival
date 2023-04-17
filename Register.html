@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In - Sign Up Form</title>
+    <link rel="stylesheet" href="register.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg"></div>
+      <div class="form-wrapper">
+        <img src="images/0.jpg" />
+        <h1 class="form-heading">midAutumn</h1>
+        <form class="contact-form">
+          <div class="toggle-links">
+            <a href="./Register.html" class="toggle-link signup">Sign Up</a>
+            <span>/</span>
+            <a href="./Login.html" class="toggle-link signin">Sign In</a>
+          </div>
+
+          <img src="images/img_4.png" id=idface style="width:70px;height:70px;border-radius: 50%;margin-left: 30px;cursor:pointer;top:150px;left:90px;opacity: 1 ">
+          <select name=lanrentuku onchange="getSelectedImageValue()" style="border-radius: 25px;margin-left: 30px;cursor:pointer;left:25px;opacity: 1;position:relative;top:55px;width:60px;background-color: #4b4b4b;color:lightgray ">
+            <option value="images/user.png" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer">user1</option>
+            <option value="images/img_1.png" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer" >user2</option>
+            <option value="images/img_2.png" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer">user3</option>
+          </select>
+
+          <div class="inputs">
+            <input
+              type="text"
+              class="input-field hide"
+              placeholder="Name"
+            />
+            <input
+              type="password"
+              class="input-field hide"
+              placeholder="Password"
+            />
+
+          <button class="submit" type="button" id="submitBtn">Sign Up</button>
+          <div class="social-media">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../Downloads/Sign%20In%20-%20Sign%20Up%20Form/script.js"></script>
+    <script>
+
+      function getSelectedImageValue() {
+        let selectElement = document.getElementsByName("lanrentuku")[0]; // 获取 select 元素
+        let selectedValue = selectElement.options[selectElement.selectedIndex].value; // 获取被选择的 option 的 value 值
+        document.getElementById("idface").src = selectedValue
+      }
+
+      $(document).ready(function() {
+        // 监听 submit 按钮的点击事件
+        $("#submitBtn").click(function() {
+          // 获取表单中的值
+          var Name = $(".input-field.hide:nth-child(1)").val();
+          var Password = $(".input-field.hide:nth-child(2)").val();
+
+          // 构建提交给后端的数据对象
+          var formData = {
+            username: Name,
+            password: Password,
+            avatar: document.getElementById("idface").src
+          };
+          console.log(formData)
+          // 发送 AJAX 请求给后端
+          $.ajax({
+            type: "GET",
+            url: "http://localhost:3050/user/register", // 替换为实际的后端接口 URL
+            data: formData, // 发送的数据对象
+            success: function(response) {
+              console.log(response); // 可以在控制台打印后端返回的响应
+              alert('success return login')
+            },
+            error: function(error) {
+              // 请求失败后的处理逻辑
+              console.log(error); // 可以在控制台打印错误信息
+            }
+          });
+        });
+      });
+
+
+    </script>
+  </body>
+</html>

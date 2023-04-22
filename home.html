@@ -55,6 +55,12 @@
           </a>
         </li>
         <li class="nav__item">
+          <a href="./poem/zhongqiu.html" class="nav__link">
+            <i class="uil uil-scenery nav__icon"></i>
+            <p>Poem</p>
+          </a>
+        </li>
+        <li class="nav__item">
           <a href="#contact" class="nav__link">
             <i class="uil uil-message nav__icon"></i>
             <p>Contactme</p>
@@ -73,7 +79,7 @@
 
     <div class="nav__btns">
       <div class="dropdown">
-        <img id="myImage" src='images/user.png' alt="" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer"/>
+        <img id="myImage" src='images/user.png' alt="" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer" onclick="enter()"/>
         <div class="dropdown-content">
           <p id="username">Lisa</p>
           <button class="button1" onclick="cancel()">logout</button>
@@ -508,6 +514,11 @@
   let usernameElement = document.getElementById("username");
   usernameElement.textContent = localStorage.getItem('name')
   console.log(usernameElement.textContent)
+
+  function enter(){
+   window.location.href='./personal.html'
+    console.log('ok')
+  }
 
   function cancel(){
     myImage.src = 'images/img_3.png'

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+  <!--==================== UNICONS 图标====================-->
+  <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+  />
+  <!--==================== SWIPER CSS ====================-->
+  <link rel="stylesheet" href="../midAutumn/assets/css/swiper-bundle.min.css"/>
+
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="../midAutumn/assets/css/styles.css"/>
+  <!-- iconfont font class 方式引用图标 -->
+  <!-- <link
+    rel="stylesheet"
+    href="https://at.alicdn.com/t/c/font_3900458_82z46p85im.css"
+  /> -->
+
+  <title>HomePage</title>
+</head>
+<body>
+<!--==================== HEADER ====================-->
+<header class="header scroll-header" id="header">
+  <nav class="nav container">
+    <a href="#" class="nav__logo">midAutumn</a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list grid">
+        <li class="nav__item">
+          <a href="./home.html#home" class="nav__link">
+            <i class="uil uil-estate nav__icon"></i>
+            <p>Home</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./home.html#about" class="nav__link">
+            <i class="uil uil-user nav__icon"></i>
+            <p>About</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./home.html#skills" class="nav__link">
+            <i class="uil uil-file-alt nav__icon"></i>
+            <p>History</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./games.html" class="nav__link">
+            <i class="uil uil-scenery nav__icon"></i>
+            <p>Games</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./poem/zhongqiu.html" class="nav__link">
+            <i class="uil uil-scenery nav__icon"></i>
+            <p>Poem</p>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="./home.html#contact" class="nav__link">
+            <i class="uil uil-message nav__icon"></i>
+            <p>Contactme</p>
+          </a>
+        </li>
+      </ul>
+      <i class="uil uil-times nav__close" id="nav-close"></i>
+    </div>
+
+    <div class="nav__btns">
+      <i class="uil uil-moon change-theme" id="theme-button"></i>
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="uil uil-apps"></i>
+      </div>
+    </div>
+
+    <div class="nav__btns">
+      <div class="dropdown">
+        <img id="myImage" src='images/user.png' alt="" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer" onclick="enter()"/>
+        <div class="dropdown-content">
+          <p id="username">Lisa</p>
+          <script>
+            let usernameElement = document.getElementById("username");
+            usernameElement.textContent = localStorage.getItem('name')
+          </script>
+          <button class="button1" onclick="cancel()">logout</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let img = localStorage.getItem('img')
+      let myImage = document.getElementById("myImage");
+      myImage.src = img;
+      let user = document.getElementById("user");
+      console.log(user.href)
+      user.href.animVal=img;
+      user.href.baseVal=img;
+    </script>
+  </nav>
+</header>
+
+<!--==================== MAIN ====================-->
+<main class="main">
+  <!--==================== HOME ====================-->
+  <section class="home section" id="home">
+    <div class="home__container container grid">
+      <div class="home__content grid">
+        <div class="home__social">
+          <a
+            href="https://gitee.com/asoutherncat/"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <!-- <i class="uil uil-linkedin-alt"></i> -->
+            <svg
+              t="1674798484640"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="2757"
+            >
+              <path
+                d="M512 1024C229.222 1024 0 794.778 0 512S229.222 0 512 0s512 229.222 512 512-229.222 512-512 512z m259.149-568.883h-290.74a25.293 25.293 0 0 0-25.292 25.293l-0.026 63.206c0 13.952 11.315 25.293 25.267 25.293h177.024c13.978 0 25.293 11.315 25.293 25.267v12.646a75.853 75.853 0 0 1-75.853 75.853h-240.23a25.293 25.293 0 0 1-25.267-25.293V417.203a75.853 75.853 0 0 1 75.827-75.853h353.946a25.293 25.293 0 0 0 25.267-25.292l0.077-63.207a25.293 25.293 0 0 0-25.268-25.293H417.152a189.62 189.62 0 0 0-189.62 189.645V771.15c0 13.977 11.316 25.293 25.294 25.293h372.94a170.65 170.65 0 0 0 170.65-170.65V480.384a25.293 25.293 0 0 0-25.293-25.267z"
+                fill="hsl(250deg 69% 61%)"
+                p-id="2758"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="http://github.com"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <i class="uil uil-github-alt"></i>
+          </a>
+          <a
+            href="https://t.bilibili.com/"
+            target="_blank"
+            class="home__social-icon"
+          >
+            <!-- <i class="uil uil-dribbble"></i> -->
+            <svg
+              t="1674801734735"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="4124"
+            >
+              <path
+                d="M777.514667 131.669333a53.333333 53.333333 0 0 1 0 75.434667L728.746667 255.829333h49.92A160 160 0 0 1 938.666667 415.872v320a160 160 0 0 1-160 160H245.333333A160 160 0 0 1 85.333333 735.872v-320a160 160 0 0 1 160-160h49.749334L246.4 207.146667a53.333333 53.333333 0 1 1 75.392-75.434667l113.152 113.152c3.370667 3.370667 6.186667 7.04 8.448 10.965333h137.088c2.261333-3.925333 5.12-7.68 8.490667-11.008l113.109333-113.152a53.333333 53.333333 0 0 1 75.434667 0z m1.152 231.253334H245.333333a53.333333 53.333333 0 0 0-53.205333 49.365333l-0.128 4.010667v320c0 28.117333 21.76 51.157333 49.365333 53.162666l3.968 0.170667h533.333334a53.333333 53.333333 0 0 0 53.205333-49.365333l0.128-3.968v-320c0-29.44-23.893333-53.333333-53.333333-53.333334z m-426.666667 106.666666c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z m320 0c29.44 0 53.333333 23.893333 53.333333 53.333334v53.333333a53.333333 53.333333 0 1 1-106.666666 0v-53.333333c0-29.44 23.893333-53.333333 53.333333-53.333334z"
+                fill="hsl(250deg 69% 61%)"
+                p-id="4125"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="home__img">
+          <svg
+            class="home__blob"
+            viewBox="0 0 200 187"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <div style="position:relative;top:-2rem">
+            <img src="images/img_4.png" id=idface style="width:15rem;height:15rem;border-radius: 50%;margin-left: 10px;cursor:pointer;left:90px;opacity: 1;margin-top: -20rem ">
+            <select name=lanrentuku onchange="getSelectedImageValue()" style="border-radius: 25px;margin-left: 30px;cursor:pointer;left:-145px;opacity: 1;margin-left:15rem;position:relative;top:55px;width:60px;background-color: #4b4b4b;color:lightgray ">
+              <option value="images/user.png" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer">user1</option>
+              <option value="images/img_1.png" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer" >user2</option>
+              <option value="images/img_2.png" style="width:50px;height:50px;border-radius: 50%;margin-left: 30px;cursor:pointer">user3</option>
+            </select>
+            </div>
+          </svg>
+        </div>
+        <div style="display: flex;flex-direction: column">
+          <input id="username1" style="width:60%" type="text" placeholder="Username" name="usrnm">
+          <input id="password" style="width:60%;margin-top: 2rem" type="password" placeholder="Password" name="psw">
+        </div>
+      </div>
+      <div class="button" style="margin-top: -4rem;width:27%;margin-left: 3rem;height:80%">
+        <span style="margin-left: 3.3rem;height:80%;position:relative;top:-.8rem;cursor:pointer" onclick="submit()">Modify</span>
+      </div>
+      <script>
+        function submit(){
+          let username = document.getElementById("username1").value;
+          let password = document.getElementById("password").value;
+          console.log(username,password,document.getElementsByName("lanrentuku")[0].options[document.getElementsByName("lanrentuku")[0].selectedIndex].value)
+          let formData = {
+            username:localStorage.getItem('name'),
+            new_username: username,
+            password: password,
+            avatar: document.getElementsByName("lanrentuku")[0].options[document.getElementsByName("lanrentuku")[0].selectedIndex].value
+          };
+          console.log(formData)
+          // 发送 AJAX 请求给后端
+          $.ajax({
+            type: "GET",
+            url: "http://localhost:3050/user/change", // 替换为实际的后端接口 URL
+            data: formData, // 发送的数据对象
+            success: function(response) {
+              console.log(response.avatar); // 可以在控制台打印后端返回的响应
+              localStorage.setItem('img',response.avatar)
+            },
+            error: function(error) {
+              // 请求失败后的处理逻辑
+              console.log(error); // 可以在控制台打印错误信息
+            }
+          });
+          window.location.href='Login.html'
+        }
+      </script>
+    </div>
+  </section>
+
+</footer>
+
+<!--==================== SWIPER JS ====================-->
+<script src="../midAutumn/assets/js/swiper-bundle.min.js"></script>
+
+<!-- iconfont JS -->
+<script src="../midAutumn/assets/js/iconfont.js"></script>
+<!-- jquery -->
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--==================== MAIN JS ====================-->
+<script src="../midAutumn/assets/js/main.js"></script>
+
+<script>
+  let usernameElement1 = document.getElementById("username1");
+  usernameElement1.placeholder = localStorage.getItem('name')
+  function enter(){
+    window.location.href='./personal.html'
+  }
+
+  function cancel(){
+    myImage.src = 'images/img_3.png'
+    usernameElement.textContent = 'unknown'
+    localStorage.setItem('name','unknown')
+    localStorage.setItem('img','images/img_3.png')
+  }
+  function getSelectedImageValue() {
+    let selectElement = document.getElementsByName("lanrentuku")[0]; // 获取 select 元素
+    let selectedValue = selectElement.options[selectElement.selectedIndex].value; // 获取被选择的 option 的 value 值
+    document.getElementById("idface").src = selectedValue
+    console.log(selectedValue)
+  }
+</script>
+</main>
+</body>
+</html>

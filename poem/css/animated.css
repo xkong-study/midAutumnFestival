@@ -1,0 +1,199 @@
+.animate{animation: 2s linear}
+
+.animate2{animation: 2s linear 1s}
+
+.infinite{animation-iteration-count: infinite;}
+
+/*�ӳ�*/
+
+.delay1{animation-delay: 2s;}
+
+.delay2{animation-delay: 3s;}
+
+.delay3{animation-delay: 5s;}
+
+.delay4{animation-delay: 6s;}
+
+.delay5{animation-delay: 8s;}
+
+
+.zidelay1{animation-delay: 1s;}
+.zidelay2{animation-delay: 2s;}
+.zidelay3{animation-delay: 3.5s;}
+.zidelay4{animation-delay: 4s;}
+.zidelay5{animation-delay: 5s;}
+.zidelay6{animation-delay: 6s;}
+.zidelay7{animation-delay: 7s;}
+.zidelay8{animation-delay: 8s;}
+.zidelay9{animation-delay: 9s;}
+.zidelay10{animation-delay: 10s;}
+.zidelay11{animation-delay: 11s;}
+.zidelay12{animation-delay: 12s;}
+.zidelay13{animation-delay: 13s;}
+.zidelay14{animation-delay: 14s;}
+.zidelay15{animation-delay: 15s;}
+.zidelay16{animation-delay: 16s;}
+.zidelay17{animation-delay: 17s;}
+
+
+/*һ*/
+.zq1{animation-name: zq1}
+.zq2{animation-name: zq2}
+
+.yun1{animation-name: yun1}
+.yun2{animation-name: yun2}
+
+/*��*/
+.xingxing{animation-name: xingxing}
+
+.zizi{animation-name: zizi}
+
+.zizi1{animation-name: zizi1}
+
+.xianxian{animation-name: xianxian}
+
+
+/*��*/
+.qy{animation-name: qy}
+
+.wenzi{animation-name: wenzi}
+
+/*��*/
+
+.xisu{animation-name: xisu}
+
+.wenzi22{animation-name: wenzi22}
+
+.zuo{animation-name: zuo}
+
+.you{animation-name: you}
+
+.suo{animation-name: suo}
+
+.shang{animation-name: shang}
+
+.xia{animation-name: xia}
+
+/*��*/
+
+.meishi{animation-name: meishi}
+
+/*��*/
+
+
+/*һ*/
+@keyframes zq1 {
+    0%{transform: translate(-2rem,-2rem)}
+    100%{transform: translate(0rem,0rem)}
+}
+
+@keyframes zq2 {
+    0%{transform: translate(2rem,-2rem)}
+    100%{transform: translate(0rem,0rem)}
+}
+
+@keyframes yun1 {
+    0%{transform: translateX(0rem)}
+    20%{transform: translateX(-1.5rem)}
+    40%{transform: translateX(-3rem)}
+    60%{transform: translateX(-5.5rem);opacity: 0}
+    80%{transform: translateX(3rem);opacity: 0}
+    90%{transform: translateX(1.5rem)}
+    100%{transform: translateX(0rem)}
+}
+
+@keyframes yun2 {
+    0%{transform: translateX(0rem)}
+    20%{transform: translateX(3.5rem)}
+    40%{transform: translateX(6rem);opacity: 0}
+    60%{transform: translateX(-2.4rem);opacity: 0}
+    80%{transform: translateX(-1rem)}
+    90%{transform: translateX(-0.5rem)}
+    100%{transform: translateX(0rem)}
+}
+
+
+/*��*/
+@keyframes xingxing {
+    0%{transform:scale(0) rotate(0deg);opacity: 0}
+    100%{transform:scale(1) rotate(360deg);opacity: 1}
+}
+
+@keyframes zizi {
+    0%{transform: translateY(-2rem);opacity: 0}
+    50%{transform: translateY(2rem);opacity: 1}
+    100%{transform: translateY(0rem);opacity: 1}
+}
+
+@keyframes zizi1 {
+    0%{transform: translateX(5rem);opacity: 0}
+    100%{transform: translateX(0rem);opacity: 1}
+}
+
+@keyframes xianxian {
+    0%{opacity: 0}
+    100%{opacity: 1}
+}
+
+
+/*��*/
+
+@keyframes qy {
+    0%{transform: rotate(0deg);opacity: 0}
+    100%{transform: rotate(360deg);opacity: 1}
+}
+
+@keyframes wenzi {
+    0%{transform: translateY(-10rem);opacity: 0}
+    50%{transform: translateY(5rem);opacity: 1}
+    100%{transform: translateY(0);opacity: 1}
+}
+
+/*��*/
+
+@keyframes xisu {
+    0%{transform: scale(0);opacity: 0}
+    50%{transform: scale(2);opacity: 1}
+    100%{transform: scale(1);opacity: 1}
+}
+
+@keyframes wenzi22 {
+    0%{transform: translateX(-10rem);opacity: 0}
+    50%{transform: translateX(2rem);opacity: 1}
+    100%{transform: translateX(0);opacity: 1}
+}
+
+@keyframes zuo {
+    0%{transform: translateX(-5rem); opacity: 0}
+    100%{transform: translateX(0rem);opacity: 1}
+}
+
+@keyframes you {
+    0%{transform: translateX(5rem); opacity: 0}
+    100%{transform: translateX(0rem);opacity: 1}
+}
+
+@keyframes suo {
+    0%{transform: scale(0);opacity: 0}
+    50%{transform: scale(2);opacity: 1}
+    100%{transform: scale(1);opacity: 1}
+}
+
+@keyframes shang {
+    0%{transform: translateY(-5rem);opacity: 0}
+    100%{transform: translateY(0rem);opacity: 1}
+}
+
+@keyframes xia {
+    0%{transform: translateY(5rem);opacity: 0}
+    100%{transform: translateY(0rem);opacity: 1}
+}
+
+/*��*/
+
+@keyframes meishi {
+    0%{transform:rotateY(0deg) }
+    100%{transform:rotateY(360deg)}
+}
+
+/*��*/
